@@ -1,0 +1,6 @@
+@team_hub_gateway_HostAddress = http://localhost:5080
+
+GET {{team_hub_gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

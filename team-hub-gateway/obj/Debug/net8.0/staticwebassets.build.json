@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "xc3p6zgKeWywqFdLlnQ2ryWz6qGSPvwJeVKSG8EMXJU=",
+  "Source": "team-hub-gateway",
+  "BasePath": "_content/team-hub-gateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

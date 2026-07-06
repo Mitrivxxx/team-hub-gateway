@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj": {}
+  },
+  "projects": {
+    "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
+        "projectName": "team-hub-gateway",
+        "projectPath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
+        "packagesPath": "/home/matsma/.nuget/packages/",
+        "outputPath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/matsma/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.27, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            },
+            "Yarp.ReverseProxy": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.127/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

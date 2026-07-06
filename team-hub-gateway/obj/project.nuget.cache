@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "O2IVh9hhwcLUvketWHNKV/vHxkOPoE9+uJ1TBSVQdZIlYmbjzWU9iCKcH29I6I8qwZWnfvBJ4o2Mmfyc3p//pA==",
+  "success": true,
+  "projectFilePath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
+  "expectedPackageFiles": [
+    "/home/matsma/.nuget/packages/microsoft.aspnetcore.openapi/8.0.27/microsoft.aspnetcore.openapi.8.0.27.nupkg.sha512",
+    "/home/matsma/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/matsma/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
+    "/home/matsma/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "/home/matsma/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "/home/matsma/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "/home/matsma/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.6.2/swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
+    "/home/matsma/.nuget/packages/system.io.hashing/8.0.0/system.io.hashing.8.0.0.nupkg.sha512",
+    "/home/matsma/.nuget/packages/yarp.reverseproxy/2.3.0/yarp.reverseproxy.2.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

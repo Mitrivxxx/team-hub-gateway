@@ -1,0 +1,19 @@
+{
+  "ReverseProxy": {
+    "Routes": {
+      "auth-route": {
+        "ClusterId": "auth-cluster",
+        "Match": {
+          "Path": "/api/auth/{**catch-all}"
+        }
+      }
+    },
+    "Clusters": {
+      "auth-cluster": {
+        "Destinations": {
+          "auth": {}
+        }
+      }
+    }
+  }
+}
