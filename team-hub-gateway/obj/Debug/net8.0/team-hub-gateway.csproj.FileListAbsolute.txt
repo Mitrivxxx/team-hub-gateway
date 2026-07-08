@@ -35,3 +35,12 @@
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/team-hub-gateway.pdb
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/team-hub-gateway.genruntimeconfig.cache
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/ref/team-hub-gateway.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/appsettings.Production.json
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

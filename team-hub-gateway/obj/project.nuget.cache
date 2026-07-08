@@ -1,18 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "O2IVh9hhwcLUvketWHNKV/vHxkOPoE9+uJ1TBSVQdZIlYmbjzWU9iCKcH29I6I8qwZWnfvBJ4o2Mmfyc3p//pA==",
+  "dgSpecHash": "t5P5LksUegiRVf4aQXD1pYRmjUi0ZDe42TfV2J/DLZ7GUkDmdVE8FQYm2rLVkgwtJcGvnQN9RLm+78PhxrT7lg==",
   "success": true,
   "projectFilePath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
   "expectedPackageFiles": [
-    "/home/matsma/.nuget/packages/microsoft.aspnetcore.openapi/8.0.27/microsoft.aspnetcore.openapi.8.0.27.nupkg.sha512",
-    "/home/matsma/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "/home/matsma/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
-    "/home/matsma/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
-    "/home/matsma/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
-    "/home/matsma/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
-    "/home/matsma/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.6.2/swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
-    "/home/matsma/.nuget/packages/system.io.hashing/8.0.0/system.io.hashing.8.0.0.nupkg.sha512",
-    "/home/matsma/.nuget/packages/yarp.reverseproxy/2.3.0/yarp.reverseproxy.2.3.0.nupkg.sha512"
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/microsoft.aspnetcore.authentication.jwtbearer/8.0.11/microsoft.aspnetcore.authentication.jwtbearer.8.0.11.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/microsoft.aspnetcore.openapi/8.0.27/microsoft.aspnetcore.openapi.8.0.27.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/microsoft.identitymodel.abstractions/7.1.2/microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/microsoft.identitymodel.jsonwebtokens/7.1.2/microsoft.identitymodel.jsonwebtokens.7.1.2.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/microsoft.identitymodel.logging/7.1.2/microsoft.identitymodel.logging.7.1.2.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/microsoft.identitymodel.protocols/7.1.2/microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/microsoft.identitymodel.protocols.openidconnect/7.1.2/microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/microsoft.identitymodel.tokens/7.1.2/microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/swashbuckle.aspnetcore.swaggerui/6.6.2/swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/system.identitymodel.tokens.jwt/7.1.2/system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/system.io.hashing/8.0.0/system.io.hashing.8.0.0.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/fffdf72d68990d990b7cca9052522ca1/nuget/yarp.reverseproxy/2.3.0/yarp.reverseproxy.2.3.0.nupkg.sha512"
   ],
   "logs": []
 }
