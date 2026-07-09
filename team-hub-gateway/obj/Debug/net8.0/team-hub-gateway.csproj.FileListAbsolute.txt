@@ -6,11 +6,6 @@
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/team-hub-gateway.runtimeconfig.json
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/team-hub-gateway.dll
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/team-hub-gateway.pdb
-/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
-/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.OpenApi.dll
-/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
-/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/System.IO.Hashing.dll
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Yarp.ReverseProxy.dll
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/team-hub-gateway.csproj.AssemblyReference.cache
@@ -18,7 +13,6 @@
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/team-hub-gateway.AssemblyInfoInputs.cache
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/team-hub-gateway.AssemblyInfo.cs
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/team-hub-gateway.csproj.CoreCompileInputs.cache
-/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/team-hub-gateway.MvcApplicationPartsAssemblyInfo.cs
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/team-hub-gateway.MvcApplicationPartsAssemblyInfo.cache
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/team-hub-gateway.sourcelink.json
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/staticwebassets.build.json
@@ -44,3 +38,8 @@
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/Debug/net8.0/team-hub-gateway.MvcApplicationPartsAssemblyInfo.cs

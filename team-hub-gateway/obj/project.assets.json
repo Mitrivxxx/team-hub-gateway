@@ -21,25 +21,6 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.OpenApi/8.0.27": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OpenApi": "1.4.3"
-        },
-        "compile": {
-          "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
         "type": "package",
         "build": {
@@ -293,21 +274,6 @@
         "lib/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
         "microsoft.aspnetcore.authentication.jwtbearer.8.0.11.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.OpenApi/8.0.27": {
-      "sha512": "lbjwtlQ1ICGKp3UyhoF9i4APpzX01CqtY8vVba2vL32Nm3v5ir9/FJ0PHXfxgsO5sr1Bb4KkCOH7FSauEHUgRQ==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.openapi/8.0.27",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll",
-        "lib/net8.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.8.0.27.nupkg.sha512",
-        "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
@@ -876,13 +842,12 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.11",
-      "Microsoft.AspNetCore.OpenApi >= 8.0.27",
       "Swashbuckle.AspNetCore >= 6.6.2",
       "Yarp.ReverseProxy >= 2.3.0"
     ]
   },
   "packageFolders": {
-    "/home/matsma/.nuget/packages/": {}
+    "/tmp/cursor-sandbox-cache/d158fb8307a2dca67066d439884862a2/nuget": {}
   },
   "project": {
     "version": "1.0.0",
@@ -890,7 +855,7 @@
       "projectUniqueName": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
       "projectName": "team-hub-gateway",
       "projectPath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
-      "packagesPath": "/home/matsma/.nuget/packages/",
+      "packagesPath": "/tmp/cursor-sandbox-cache/d158fb8307a2dca67066d439884862a2/nuget",
       "outputPath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
@@ -921,10 +886,6 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[8.0.11, )"
-          },
-          "Microsoft.AspNetCore.OpenApi": {
-            "target": "Package",
-            "version": "[8.0.27, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

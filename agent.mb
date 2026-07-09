@@ -7,6 +7,7 @@
 - `team-hub-gateway/reverseproxy.json`
 - `team-hub-gateway/appsettings.*.json`
 - `team-hub-gateway/Properties/launchSettings.json`
+- `tesam-hub-gateway.Test/*.cs`
 
 ## Do
 - Trzymaj routing `/api/auth/{**catch-all}` do `auth-cluster`.
@@ -18,6 +19,10 @@
 - Trzymaj CORS po stronie gateway z whitelista originow z configu (`Cors:AllowedOrigins`).
 - Trzymaj rate limiting per IP (`RateLimiting:*`) na wejsciu gateway.
 - Auth validation (JWT) trzymaj konfigurowalne (`AuthValidation:*`, `Jwt:*`); domyslnie wylaczone, wlaczaj dopiero po ustawieniu poprawnych wartosci JWT.
+- Trzymaj endpoint healthcheck pod `/healtch` mapowany przez `MapHealthChecks`.
+- Trzymaj aktywny Swagger UI pod `/swagger` i konfiguracje (`AddSwaggerGen`, `UseSwagger`, `UseSwaggerUI`) w kodzie.
+- Trzymaj `team-hub-gateway.http` bez artefaktow startera (`/weatherforecast`); probe kieruj na `/healtch`.
+- Testy podstawowe trzymaj w `tesam-hub-gateway.Test` (XUnit), min. dla scenariuszy walidacji konfiguracji JWT/Auth.
 - Aktualizuj ten plik po zmianie tras, clusterow, TLS/portow.
 
 ## Don't
