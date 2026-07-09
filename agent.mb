@@ -1,0 +1,24 @@
+## Purpose
+- Krotki kontekst dla agenta gateway.
+
+## Source of truth
+- `team-hub-gateway/Program.cs`
+- `team-hub-gateway/Configuration/*.cs`
+- `team-hub-gateway/reverseproxy.json`
+- `team-hub-gateway/appsettings.*.json`
+- `team-hub-gateway/Properties/launchSettings.json`
+
+## Do
+- Trzymaj routing `/api/auth/{**catch-all}` do `auth-cluster`.
+- Pilnuj roznic destination dev/prod z configu.
+- W dev trzymaj gateway na `https://localhost:5000` i destination auth na `http://localhost:5001/`.
+- Wymuszaj HTTPS: ruch po `http://` przekierowuj stale (`301`) na `https://`.
+- Uzywaj `ForwardedHeaders` (`X-Forwarded-For`, `X-Forwarded-Proto`) przed `UseHttpsRedirection`, aby HTTPS za LB/proxy byl poprawnie rozpoznany.
+- Trzymaj globalny `UseExceptionHandler` i zwracaj JSON `{"error":"Internal Server Error"}` bez stack trace.
+- Trzymaj CORS po stronie gateway z whitelista originow z configu (`Cors:AllowedOrigins`).
+- Trzymaj rate limiting per IP (`RateLimiting:*`) na wejsciu gateway.
+- Auth validation (JWT) trzymaj konfigurowalne (`AuthValidation:*`, `Jwt:*`); domyslnie wylaczone, wlaczaj dopiero po ustawieniu poprawnych wartosci JWT.
+- Aktualizuj ten plik po zmianie tras, clusterow, TLS/portow.
+
+## Don't
+- Nie dodawaj tras bez potwierdzenia w wymaganiach.
