@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.IdentityModel.Tokens;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Trace;
 using team_hub_gateway.Configuration.Options;
 using System.Threading.RateLimiting;
 
@@ -105,6 +107,21 @@ public static class ServiceCollectionExtensions
 
             services.AddAuthorization();
         }
+
+        services.AddOpenTelemetry()
+            .WithTracing(tracing =>
+            {
+                tracing.AddAspNetCoreInstrumentation(options => options.RecordException = true);
+                tracing.AddHttpClientInstrumentation();
+                tracing.AddOtlpExporter();
+            })
+            .WithMetrics(metrics =>
+            {
+                metrics.AddAspNetCoreInstrumentation();
+                metrics.AddHttpClientInstrumentation();
+                metrics.AddRuntimeInstrumentation();
+                metrics.AddPrometheusExporter();
+            });
 
         services.AddReverseProxy()
             .LoadFromConfig(configuration.GetSection("ReverseProxy"));

@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using team_hub_gateway.Configuration.Options;
+using System.Diagnostics;
+using Yarp.ReverseProxy.Model;
 
 namespace team_hub_gateway.Configuration;
 
@@ -59,6 +61,33 @@ public static class ApplicationBuilderExtensions
             context.Response.StatusCode = StatusCodes.Status401Unauthorized;
             context.Response.ContentType = "application/json";
             await context.Response.WriteAsJsonAsync(new { error = "Unauthorized" });
+        });
+
+        app.Use(async (context, next) =>
+        {
+            var stopwatch = Stopwatch.StartNew();
+            await next();
+            stopwatch.Stop();
+
+            var proxyFeature = context.Features.Get<IReverseProxyFeature>();
+            if (proxyFeature is null)
+            {
+                return;
+            }
+
+            var routeId = proxyFeature.Route.Config.RouteId;
+            var clusterId = proxyFeature.Cluster?.Config.ClusterId ?? "unknown";
+            var upstreamAddress = proxyFeature.ProxiedDestination?.Model.Config.Address ?? "unknown";
+
+            app.Logger.LogInformation(
+                "Proxy request {Method} {Path} => {StatusCode} in {ElapsedMs}ms (route: {RouteId}, cluster: {ClusterId}, upstream: {Upstream})",
+                context.Request.Method,
+                context.Request.Path,
+                context.Response.StatusCode,
+                stopwatch.ElapsedMilliseconds,
+                routeId,
+                clusterId,
+                upstreamAddress);
         });
 
         app.MapReverseProxy();

@@ -20,6 +20,8 @@
 - Trzymaj rate limiting per IP (`RateLimiting:*`) na wejsciu gateway.
 - Auth validation (JWT) trzymaj konfigurowalne (`AuthValidation:*`, `Jwt:*`); domyslnie wylaczone, wlaczaj dopiero po ustawieniu poprawnych wartosci JWT.
 - Trzymaj endpoint healthcheck pod `/healtch` mapowany przez `MapHealthChecks`.
+- Trzymaj observability gateway: Serilog (console) + metryki (`/metrics`) + trace OpenTelemetry (OTLP exporter).
+- Trzymaj szczegolowe logi requestow proxy: metoda, path, status, czas, route, cluster, upstream destination.
 - Trzymaj aktywny Swagger UI pod `/swagger` i konfiguracje (`AddSwaggerGen`, `UseSwagger`, `UseSwaggerUI`) w kodzie.
 - Trzymaj `team-hub-gateway.http` bez artefaktow startera (`/weatherforecast`); probe kieruj na `/healtch`.
 - Testy podstawowe trzymaj w `tesam-hub-gateway.Test` (XUnit), min. dla scenariuszy walidacji konfiguracji JWT/Auth.
