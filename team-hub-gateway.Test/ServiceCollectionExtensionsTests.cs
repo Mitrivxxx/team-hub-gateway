@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using team_hub_gateway.Configuration;
 using Xunit;
 
-namespace tesam_hub_gateway.Test;
+namespace team_hub_gateway.Test;
 
 public class ServiceCollectionExtensionsTests
 {
