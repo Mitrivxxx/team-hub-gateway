@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "K7oI5jaYp14gfLedWC9h5IJthvyBch64VXKuuNQnnQuYeifeo5ZeMfEL48bvvq9HHz1v38fu9NH3xpKZq44tMQ==",
+  "dgSpecHash": "9c1lIrAkD14Zpvx0JrXBAhwAyTkWF5Pgs5WxkaIJ40OnqJIqKIp61hQDIZ1EvKKpatR7iC7OW83yLzPXbNEE8Q==",
   "success": true,
   "projectFilePath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
   "expectedPackageFiles": [
-    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/google.protobuf/3.22.5/google.protobuf.3.22.5.nupkg.sha512",
-    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/grpc.core.api/2.52.0/grpc.core.api.2.52.0.nupkg.sha512",
-    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/grpc.net.client/2.52.0/grpc.net.client.2.52.0.nupkg.sha512",
-    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/grpc.net.common/2.52.0/grpc.net.common.2.52.0.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/google.protobuf/3.26.1/google.protobuf.3.26.1.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/grpc.core.api/2.62.0/grpc.core.api.2.62.0.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/grpc.net.client/2.62.0/grpc.net.client.2.62.0.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/grpc.net.common/2.62.0/grpc.net.common.2.62.0.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/microsoft.aspnetcore.authentication.jwtbearer/8.0.11/microsoft.aspnetcore.authentication.jwtbearer.8.0.11.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
@@ -39,10 +39,13 @@
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/opentelemetry.exporter.prometheus.aspnetcore/1.9.0-beta.2/opentelemetry.exporter.prometheus.aspnetcore.1.9.0-beta.2.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/opentelemetry.extensions.hosting/1.9.0/opentelemetry.extensions.hosting.1.9.0.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/opentelemetry.instrumentation.aspnetcore/1.9.0/opentelemetry.instrumentation.aspnetcore.1.9.0.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/opentelemetry.instrumentation.entityframeworkcore/1.0.0-beta.12/opentelemetry.instrumentation.entityframeworkcore.1.0.0-beta.12.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/opentelemetry.instrumentation.http/1.9.0/opentelemetry.instrumentation.http.1.9.0.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/opentelemetry.instrumentation.process/0.5.0-beta.7/opentelemetry.instrumentation.process.0.5.0-beta.7.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/opentelemetry.instrumentation.runtime/1.9.0/opentelemetry.instrumentation.runtime.1.9.0.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/serilog/4.0.0/serilog.4.0.0.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/serilog.aspnetcore/8.0.3/serilog.aspnetcore.8.0.3.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/serilog.enrichers.span/3.1.0/serilog.enrichers.span.3.1.0.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/serilog.extensions.hosting/8.0.0/serilog.extensions.hosting.8.0.0.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/serilog.extensions.logging/8.0.0/serilog.extensions.logging.8.0.0.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/serilog.formatting.compact/3.0.0/serilog.formatting.compact.3.0.0.nupkg.sha512",
@@ -50,6 +53,7 @@
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/serilog.sinks.console/5.0.1/serilog.sinks.console.5.0.1.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/serilog.sinks.debug/2.0.0/serilog.sinks.debug.2.0.0.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/serilog.sinks.file/5.0.0/serilog.sinks.file.5.0.0.nupkg.sha512",
+    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/serilog.sinks.opentelemetry/4.1.1/serilog.sinks.opentelemetry.4.1.1.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
@@ -57,19 +61,7 @@
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/system.identitymodel.tokens.jwt/7.1.2/system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/system.io.hashing/8.0.0/system.io.hashing.8.0.0.nupkg.sha512",
-    "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget/yarp.reverseproxy/2.3.0/yarp.reverseproxy.2.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'OpenTelemetry.Exporter.OpenTelemetryProtocol' 1.9.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-4625-4j76-fww9",
-      "libraryId": "OpenTelemetry.Exporter.OpenTelemetryProtocol",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

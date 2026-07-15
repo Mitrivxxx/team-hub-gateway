@@ -22,9 +22,9 @@
 - Keep rate limiting per IP (`RateLimiting:*`) at gateway entry.
 - Keep JWT auth validation configurable (`AuthValidation:*`, `Jwt:*`); disabled by default.
 - Keep healthcheck at `/health` as minimal API with Swagger summary; log only unhealthy results.
-- Exclude `/health` from Serilog request logging (`UseSerilogRequestLoggingExcludingHealth`).
-- Keep observability: Serilog (console), metrics (`/metrics`), OpenTelemetry traces (OTLP).
-- Keep `CorrelationIdMiddleware` before `UseSerilogRequestLogging` (header `X-Correlation-ID`; generate `Guid` when missing).
+- Exclude `/health` and `/metrics` from Serilog request logging (`UseSerilogRequestLoggingExcludingHealth`).
+- Observability via `TeamHub.Observability`: Serilog (console + OTLP prod), metrics (`/metrics`), OpenTelemetry traces (OTLP).
+- Keep `CorrelationIdMiddleware` before `UseSerilogRequestLogging` (`X-Correlation-ID` = OpenTelemetry `TraceId`).
 - Enrich all request logs with Serilog `CorrelationId` via `LogContext`.
 - Keep detailed proxy request logs: correlation id, method, path, status, duration, route, cluster, upstream destination.
 - Echo `X-Correlation-ID` on every response.

@@ -4,14 +4,14 @@
     "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj": {}
   },
   "projects": {
-    "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj": {
+    "/home/matsma/project/team-hub/building-blocks/TeamHub.Observability/TeamHub.Observability.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
-        "projectName": "team-hub-gateway",
-        "projectPath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
+        "projectUniqueName": "/home/matsma/project/team-hub/building-blocks/TeamHub.Observability/TeamHub.Observability.csproj",
+        "projectName": "TeamHub.Observability",
+        "projectPath": "/home/matsma/project/team-hub/building-blocks/TeamHub.Observability/TeamHub.Observability.csproj",
         "packagesPath": "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget",
-        "outputPath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/",
+        "outputPath": "/home/matsma/project/team-hub/building-blocks/TeamHub.Observability/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/matsma/.nuget/NuGet/NuGet.Config"
@@ -38,10 +38,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[8.0.11, )"
-            },
             "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
               "target": "Package",
               "version": "[1.9.0, )"
@@ -58,9 +54,17 @@
               "target": "Package",
               "version": "[1.9.0, )"
             },
+            "OpenTelemetry.Instrumentation.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[1.0.0-beta.12, )"
+            },
             "OpenTelemetry.Instrumentation.Http": {
               "target": "Package",
               "version": "[1.9.0, )"
+            },
+            "OpenTelemetry.Instrumentation.Process": {
+              "target": "Package",
+              "version": "[0.5.0-beta.7, )"
             },
             "OpenTelemetry.Instrumentation.Runtime": {
               "target": "Package",
@@ -70,6 +74,10 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+            "Serilog.Enrichers.Span": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Serilog.Formatting.Compact": {
               "target": "Package",
               "version": "[3.0.0, )"
@@ -77,6 +85,76 @@
             "Serilog.Sinks.Console": {
               "target": "Package",
               "version": "[5.0.1, )"
+            },
+            "Serilog.Sinks.OpenTelemetry": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.127/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
+        "projectName": "team-hub-gateway",
+        "projectPath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
+        "packagesPath": "/tmp/cursor-sandbox-cache/3ec8e89c7445d34d516995d467efc258/nuget",
+        "outputPath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/matsma/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/matsma/project/team-hub/building-blocks/TeamHub.Observability/TeamHub.Observability.csproj": {
+                "projectPath": "/home/matsma/project/team-hub/building-blocks/TeamHub.Observability/TeamHub.Observability.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("team-hub-gateway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ba85107cfda0c0084b364639685f221b0bc10a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efa4edc9397da210d6403422ccf5031478a5923e")]
 [assembly: System.Reflection.AssemblyProductAttribute("team-hub-gateway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("team-hub-gateway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

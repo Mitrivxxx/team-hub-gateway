@@ -9,61 +9,50 @@
       "team-hub-gateway/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.11",
-          "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.9.0",
-          "OpenTelemetry.Exporter.Prometheus.AspNetCore": "1.9.0-beta.2",
-          "OpenTelemetry.Extensions.Hosting": "1.9.0",
-          "OpenTelemetry.Instrumentation.AspNetCore": "1.9.0",
-          "OpenTelemetry.Instrumentation.Http": "1.9.0",
-          "OpenTelemetry.Instrumentation.Runtime": "1.9.0",
-          "Serilog.AspNetCore": "8.0.3",
-          "Serilog.Formatting.Compact": "3.0.0",
-          "Serilog.Sinks.Console": "5.0.1",
           "Swashbuckle.AspNetCore": "6.6.2",
+          "TeamHub.Observability": "1.0.0",
           "Yarp.ReverseProxy": "2.3.0"
         },
         "runtime": {
           "team-hub-gateway.dll": {}
         }
       },
-      "Google.Protobuf/3.22.5": {
+      "Google.Protobuf/3.26.1": {
         "runtime": {
           "lib/net5.0/Google.Protobuf.dll": {
-            "assemblyVersion": "3.22.5.0",
-            "fileVersion": "3.22.5.0"
+            "assemblyVersion": "3.26.1.0",
+            "fileVersion": "3.26.1.0"
           }
         }
       },
-      "Grpc.Core.Api/2.52.0": {
-        "dependencies": {
-          "System.Memory": "4.5.3"
-        },
+      "Grpc.Core.Api/2.62.0": {
         "runtime": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.52.0.0"
+            "fileVersion": "2.62.0.0"
           }
         }
       },
-      "Grpc.Net.Client/2.52.0": {
+      "Grpc.Net.Client/2.62.0": {
         "dependencies": {
-          "Grpc.Net.Common": "2.52.0",
+          "Grpc.Net.Common": "2.62.0",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
         },
         "runtime": {
-          "lib/net7.0/Grpc.Net.Client.dll": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.52.0.0"
+            "fileVersion": "2.62.0.0"
           }
         }
       },
-      "Grpc.Net.Common/2.52.0": {
+      "Grpc.Net.Common/2.62.0": {
         "dependencies": {
-          "Grpc.Core.Api": "2.52.0"
+          "Grpc.Core.Api": "2.62.0"
         },
         "runtime": {
-          "lib/net7.0/Grpc.Net.Common.dll": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.52.0.0"
+            "fileVersion": "2.62.0.0"
           }
         }
       },
@@ -287,8 +276,8 @@
       },
       "OpenTelemetry.Exporter.OpenTelemetryProtocol/1.9.0": {
         "dependencies": {
-          "Google.Protobuf": "3.22.5",
-          "Grpc.Net.Client": "2.52.0",
+          "Google.Protobuf": "3.26.1",
+          "Grpc.Net.Client": "2.62.0",
           "Microsoft.Extensions.Configuration.Binder": "8.0.1",
           "OpenTelemetry": "1.9.0"
         },
@@ -333,6 +322,18 @@
           }
         }
       },
+      "OpenTelemetry.Instrumentation.EntityFrameworkCore/1.0.0-beta.12": {
+        "dependencies": {
+          "Microsoft.Extensions.Options": "8.0.0",
+          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.9.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenTelemetry.Instrumentation.EntityFrameworkCore.dll": {
+            "assemblyVersion": "1.0.0.48",
+            "fileVersion": "1.0.0.48"
+          }
+        }
+      },
       "OpenTelemetry.Instrumentation.Http/1.9.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "8.0.0",
@@ -343,6 +344,17 @@
           "lib/net8.0/OpenTelemetry.Instrumentation.Http.dll": {
             "assemblyVersion": "1.9.0.41",
             "fileVersion": "1.9.0.41"
+          }
+        }
+      },
+      "OpenTelemetry.Instrumentation.Process/0.5.0-beta.7": {
+        "dependencies": {
+          "OpenTelemetry.Api": "1.9.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenTelemetry.Instrumentation.Process.dll": {
+            "assemblyVersion": "0.5.0.176",
+            "fileVersion": "0.5.0.176"
           }
         }
       },
@@ -380,6 +392,18 @@
           "lib/net8.0/Serilog.AspNetCore.dll": {
             "assemblyVersion": "8.0.3.0",
             "fileVersion": "8.0.3.0"
+          }
+        }
+      },
+      "Serilog.Enrichers.Span/3.1.0": {
+        "dependencies": {
+          "Serilog": "4.0.0",
+          "System.Diagnostics.DiagnosticSource": "8.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Serilog.Enrichers.Span.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.0.0"
           }
         }
       },
@@ -467,6 +491,19 @@
           }
         }
       },
+      "Serilog.Sinks.OpenTelemetry/4.1.1": {
+        "dependencies": {
+          "Google.Protobuf": "3.26.1",
+          "Grpc.Net.Client": "2.62.0",
+          "Serilog": "4.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.Sinks.OpenTelemetry.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.1.1.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.6.2": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -526,7 +563,6 @@
           }
         }
       },
-      "System.Memory/4.5.3": {},
       "Yarp.ReverseProxy/2.3.0": {
         "dependencies": {
           "System.IO.Hashing": "8.0.0"
@@ -537,6 +573,26 @@
             "fileVersion": "2.300.25.12702"
           }
         }
+      },
+      "TeamHub.Observability/1.0.0": {
+        "dependencies": {
+          "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.9.0",
+          "OpenTelemetry.Exporter.Prometheus.AspNetCore": "1.9.0-beta.2",
+          "OpenTelemetry.Extensions.Hosting": "1.9.0",
+          "OpenTelemetry.Instrumentation.AspNetCore": "1.9.0",
+          "OpenTelemetry.Instrumentation.EntityFrameworkCore": "1.0.0-beta.12",
+          "OpenTelemetry.Instrumentation.Http": "1.9.0",
+          "OpenTelemetry.Instrumentation.Process": "0.5.0-beta.7",
+          "OpenTelemetry.Instrumentation.Runtime": "1.9.0",
+          "Serilog.AspNetCore": "8.0.3",
+          "Serilog.Enrichers.Span": "3.1.0",
+          "Serilog.Formatting.Compact": "3.0.0",
+          "Serilog.Sinks.Console": "5.0.1",
+          "Serilog.Sinks.OpenTelemetry": "4.1.1"
+        },
+        "runtime": {
+          "TeamHub.Observability.dll": {}
+        }
       }
     }
   },
@@ -546,33 +602,33 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Google.Protobuf/3.22.5": {
+    "Google.Protobuf/3.26.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tTMtDZPbLxJew8pk7NBdqhLqC4OipfkZdwPuCEUNr2AoDo1siUGcxFqJK0wDewTL8ge5Cjrb16CToMPxBUHMGA==",
-      "path": "google.protobuf/3.22.5",
-      "hashPath": "google.protobuf.3.22.5.nupkg.sha512"
+      "sha512": "sha512-CHZX8zXqhF/fdUtd+AYzew8T2HFkAoe5c7lbGxZY/qryAlQXckDvM5BfOJjXlMS7kyICqQTMszj4w1bX5uBJ/w==",
+      "path": "google.protobuf/3.26.1",
+      "hashPath": "google.protobuf.3.26.1.nupkg.sha512"
     },
-    "Grpc.Core.Api/2.52.0": {
+    "Grpc.Core.Api/2.62.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SQiPyBczG4vKPmI6Fd+O58GcxxDSFr6nfRAJuBDUNj+PgdokhjWJvZE/La1c09AkL2FVm/jrDloG89nkzmVF7A==",
-      "path": "grpc.core.api/2.52.0",
-      "hashPath": "grpc.core.api.2.52.0.nupkg.sha512"
+      "sha512": "sha512-q4Jj6bRZHNnE4CMLqgjiBUCKLit+tRr0simZsS2W6U++akd7CzXByeKy2tddqT68hFzP2XzceXA2YtBTfWtixA==",
+      "path": "grpc.core.api/2.62.0",
+      "hashPath": "grpc.core.api.2.62.0.nupkg.sha512"
     },
-    "Grpc.Net.Client/2.52.0": {
+    "Grpc.Net.Client/2.62.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hWVH9g/Nnjz40ni//2S8UIOyEmhueQREoZIkD0zKHEPqLxXcNlbp4eebXIOicZtkwDSx0TFz9NpkbecEDn6rBw==",
-      "path": "grpc.net.client/2.52.0",
-      "hashPath": "grpc.net.client.2.52.0.nupkg.sha512"
+      "sha512": "sha512-C7HxLt+wWPTpPFORRHkxxtDLL+K/jXSmZBaPLhFM8AEkN0bYjklIfCwnzajn1gcbRcEETBb0WnRgHJdVzpwbCg==",
+      "path": "grpc.net.client/2.62.0",
+      "hashPath": "grpc.net.client.2.62.0.nupkg.sha512"
     },
-    "Grpc.Net.Common/2.52.0": {
+    "Grpc.Net.Common/2.62.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-di9qzpdx525IxumZdYmu6sG2y/gXJyYeZ1ruFUzB9BJ1nj4kU1/dTAioNCMt1VLRvNVDqh8S8B1oBdKhHJ4xRg==",
-      "path": "grpc.net.common/2.52.0",
-      "hashPath": "grpc.net.common.2.52.0.nupkg.sha512"
+      "sha512": "sha512-eBv5I4RPWfdezGXqooU5hs3+XcfVMLk5XDlA4G/Nd9TMX78ZGrFl/lM1Ad187zgBLmH7WPAgfjKRWLBwaa1Wbw==",
+      "path": "grpc.net.common/2.62.0",
+      "hashPath": "grpc.net.common.2.62.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.11": {
       "type": "package",
@@ -791,12 +847,26 @@
       "path": "opentelemetry.instrumentation.aspnetcore/1.9.0",
       "hashPath": "opentelemetry.instrumentation.aspnetcore.1.9.0.nupkg.sha512"
     },
+    "OpenTelemetry.Instrumentation.EntityFrameworkCore/1.0.0-beta.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L/wZDi3MXyL2OsaxykjNovTgNhGq0kVtWNcCoqzOctxYMnCUGAQHYA9XwZGpad1vnnFxHOcN3oW4qFAQuYpKUA==",
+      "path": "opentelemetry.instrumentation.entityframeworkcore/1.0.0-beta.12",
+      "hashPath": "opentelemetry.instrumentation.entityframeworkcore.1.0.0-beta.12.nupkg.sha512"
+    },
     "OpenTelemetry.Instrumentation.Http/1.9.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-+ZXppf8Qxz3OdC803T8fB6i8iSscc8PsxMnM/JizSOYmkz+8vGiScEiaBBBFNZtMh2KpA0q+qxwnSwQUkbvzog==",
       "path": "opentelemetry.instrumentation.http/1.9.0",
       "hashPath": "opentelemetry.instrumentation.http.1.9.0.nupkg.sha512"
+    },
+    "OpenTelemetry.Instrumentation.Process/0.5.0-beta.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-v+g5CPU/sJhyc1FTOgTaQTwvrQXquSxdndF+E3fS8SXYPLVAa2INHa8jqCFKvYp1rO+yaVizRw1gCOaDJJzauA==",
+      "path": "opentelemetry.instrumentation.process/0.5.0-beta.7",
+      "hashPath": "opentelemetry.instrumentation.process.0.5.0-beta.7.nupkg.sha512"
     },
     "OpenTelemetry.Instrumentation.Runtime/1.9.0": {
       "type": "package",
@@ -818,6 +888,13 @@
       "sha512": "sha512-Y5at41mc0OV982DEJslBKHd6uzcWO6POwR3QceJ6gtpMPxCzm4+FElGPF0RdaTD7MGsP6XXE05LMbSi0NO+sXg==",
       "path": "serilog.aspnetcore/8.0.3",
       "hashPath": "serilog.aspnetcore.8.0.3.nupkg.sha512"
+    },
+    "Serilog.Enrichers.Span/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xNxy5FxIuLLusRHBpJwJ/YqVw5S7Dtbt79NUsPQxDtu4+CYG4kJgjLs9fjZhKPMjZQL8GZRewT8brap9h2r+Vw==",
+      "path": "serilog.enrichers.span/3.1.0",
+      "hashPath": "serilog.enrichers.span.3.1.0.nupkg.sha512"
     },
     "Serilog.Extensions.Hosting/8.0.0": {
       "type": "package",
@@ -868,6 +945,13 @@
       "path": "serilog.sinks.file/5.0.0",
       "hashPath": "serilog.sinks.file.5.0.0.nupkg.sha512"
     },
+    "Serilog.Sinks.OpenTelemetry/4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1WylKFYPSdWZoOAxCFeOWZ14eo4H4zm79m6UogAlIji4IJX9Da83jnsAi8VKrOTOVYxQ4g6+TQvp1zC3fPJDkA==",
+      "path": "serilog.sinks.opentelemetry/4.1.1",
+      "hashPath": "serilog.sinks.opentelemetry.4.1.1.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/6.6.2": {
       "type": "package",
       "serviceable": true,
@@ -917,19 +1001,17 @@
       "path": "system.io.hashing/8.0.0",
       "hashPath": "system.io.hashing.8.0.0.nupkg.sha512"
     },
-    "System.Memory/4.5.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
-      "path": "system.memory/4.5.3",
-      "hashPath": "system.memory.4.5.3.nupkg.sha512"
-    },
     "Yarp.ReverseProxy/2.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-gxtkN3a+9biu9V9Zd5NaTO6VZWXAnS2mhQ0R/VXmSPoTuiQNZsakKikrKpDtKxrL5nUYzbRsHtl40WNq+ZBKKg==",
       "path": "yarp.reverseproxy/2.3.0",
       "hashPath": "yarp.reverseproxy.2.3.0.nupkg.sha512"
+    },
+    "TeamHub.Observability/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -67,3 +67,9 @@
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Serilog.Sinks.Console.dll
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Serilog.Sinks.Debug.dll
 /home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Serilog.Sinks.File.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/OpenTelemetry.Instrumentation.EntityFrameworkCore.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/OpenTelemetry.Instrumentation.Process.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Serilog.Enrichers.Span.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/Serilog.Sinks.OpenTelemetry.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/TeamHub.Observability.dll
+/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/bin/Debug/net8.0/TeamHub.Observability.pdb

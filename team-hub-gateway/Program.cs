@@ -1,12 +1,14 @@
 using team_hub_gateway.Configuration;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
+using TeamHub.Observability;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.AddJsonFile("reverseproxy.json", optional: false, reloadOnChange: true);
-builder.Host.AddSerilogConfiguration();
+builder.Host.AddTeamHubSerilog();
 
+builder.Services.AddTeamHubOpenTelemetry(builder.Configuration, "team-hub-gateway");
 builder.Services.AddGatewayInfrastructure(builder.Configuration);
 builder.Services.AddHealthChecks();
 builder.Services.AddEndpointsApiExplorer();
@@ -57,6 +59,6 @@ app.MapGet("/health", async (HealthCheckService healthCheckService, ILogger<Prog
     .WithTags("Observability")
     .WithSummary("Checks gateway health")
     .WithDescription("Runs application health checks and returns overall status with per-check details.");
-app.MapPrometheusScrapingEndpoint("/metrics");
+app.MapTeamHubObservabilityEndpoints();
 
 app.Run();
