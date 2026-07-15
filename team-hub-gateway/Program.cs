@@ -1,17 +1,11 @@
 using team_hub_gateway.Configuration;
-using Serilog;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.AddJsonFile("reverseproxy.json", optional: false, reloadOnChange: true);
-builder.Host.UseSerilog((context, services, loggerConfiguration) =>
-    loggerConfiguration
-        .ReadFrom.Configuration(context.Configuration)
-        .ReadFrom.Services(services)
-        .Enrich.FromLogContext()
-        .WriteTo.Console());
+builder.Host.AddSerilogConfiguration();
 
 builder.Services.AddGatewayInfrastructure(builder.Configuration);
 builder.Services.AddHealthChecks();
@@ -45,11 +39,7 @@ app.MapGet("/health", async (HealthCheckService healthCheckService, ILogger<Prog
         ? StatusCodes.Status200OK
         : StatusCodes.Status503ServiceUnavailable;
 
-    if (report.Status == HealthStatus.Healthy)
-    {
-        logger.LogInformation("Health check passed with status {HealthStatus}.", report.Status);
-    }
-    else
+    if (report.Status != HealthStatus.Healthy)
     {
         var failedChecks = report.Entries
             .Where(entry => entry.Value.Status != HealthStatus.Healthy)

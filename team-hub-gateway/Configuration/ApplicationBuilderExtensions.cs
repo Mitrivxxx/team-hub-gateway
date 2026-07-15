@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
+using Serilog;
 using team_hub_gateway.Configuration.Options;
 using System.Diagnostics;
 using Yarp.ReverseProxy.Model;
@@ -25,8 +26,9 @@ public static class ApplicationBuilderExtensions
             });
         });
 
+        app.UseMiddleware<CorrelationIdMiddleware>();
+        app.UseSerilogRequestLoggingExcludingHealth();
         app.UseForwardedHeaders();
-        app.UseHttpsRedirection();
         app.UseCors(GatewayPolicies.Cors);
         app.UseRateLimiter();
 
@@ -78,9 +80,13 @@ public static class ApplicationBuilderExtensions
             var routeId = proxyFeature.Route.Config.RouteId;
             var clusterId = proxyFeature.Cluster?.Config.ClusterId ?? "unknown";
             var upstreamAddress = proxyFeature.ProxiedDestination?.Model.Config.Address ?? "unknown";
+            var correlationId = context.Items.TryGetValue(CorrelationIdMiddleware.ItemKey, out var id)
+                ? id?.ToString() ?? "unknown"
+                : "unknown";
 
             app.Logger.LogInformation(
-                "Proxy request {Method} {Path} => {StatusCode} in {ElapsedMs}ms (route: {RouteId}, cluster: {ClusterId}, upstream: {Upstream})",
+                "Proxy request {CorrelationId} {Method} {Path} => {StatusCode} in {ElapsedMs}ms (route: {RouteId}, cluster: {ClusterId}, upstream: {Upstream})",
+                correlationId,
                 context.Request.Method,
                 context.Request.Path,
                 context.Response.StatusCode,

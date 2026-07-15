@@ -44,11 +44,6 @@ public static class ServiceCollectionExtensions
             options.KnownProxies.Clear();
         });
 
-        services.AddHttpsRedirection(options =>
-        {
-            options.RedirectStatusCode = StatusCodes.Status301MovedPermanently;
-        });
-
         var corsOptions = configuration.GetSection("Cors").Get<GatewayCorsOptions>() ?? new GatewayCorsOptions();
         services.AddCors(options =>
         {
