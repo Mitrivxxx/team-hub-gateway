@@ -104,8 +104,11 @@ public static class ServiceCollectionExtensions
             services.AddAuthorization();
         }
 
+        services.AddServiceDiscovery();
+
         services.AddReverseProxy()
-            .LoadFromConfig(configuration.GetSection("ReverseProxy"));
+            .LoadFromConfig(configuration.GetSection("ReverseProxy"))
+            .AddServiceDiscoveryDestinationResolver();
 
         return services;
     }

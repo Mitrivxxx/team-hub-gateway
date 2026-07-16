@@ -5,6 +5,7 @@ using TeamHub.Observability;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
 builder.Configuration.AddJsonFile("reverseproxy.json", optional: false, reloadOnChange: true);
 builder.Host.AddTeamHubSerilog();
 
@@ -60,5 +61,6 @@ app.MapGet("/health", async (HealthCheckService healthCheckService, ILogger<Prog
     .WithSummary("Checks gateway health")
     .WithDescription("Runs application health checks and returns overall status with per-check details.");
 app.MapTeamHubObservabilityEndpoints();
+app.MapDefaultEndpoints();
 
 app.Run();
