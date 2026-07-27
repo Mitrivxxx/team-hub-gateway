@@ -6,12 +6,34 @@
         "Match": {
           "Path": "/api/auth/{**catch-all}"
         }
+      },
+      "organizations-route": {
+        "ClusterId": "team-cluster",
+        "Match": {
+          "Path": "/api/organizations/{**catch-all}"
+        }
+      },
+      "graphql-route": {
+        "ClusterId": "bff-cluster",
+        "Match": {
+          "Path": "/api/graphql/{**catch-all}"
+        }
       }
     },
     "Clusters": {
       "auth-cluster": {
         "Destinations": {
           "auth": {}
+        }
+      },
+      "team-cluster": {
+        "Destinations": {
+          "team": {}
+        }
+      },
+      "bff-cluster": {
+        "Destinations": {
+          "bff": {}
         }
       }
     }
