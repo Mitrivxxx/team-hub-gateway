@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
-using Serilog;
-using team_hub_gateway.Configuration.Options;
 using System.Diagnostics;
+using TeamHub.Observability;
+using TeamHub.Observability.Middleware;
+using team_hub_gateway.Configuration.Options;
 using Yarp.ReverseProxy.Model;
 
 namespace team_hub_gateway.Configuration;
@@ -26,7 +27,7 @@ public static class ApplicationBuilderExtensions
             });
         });
 
-        app.UseMiddleware<CorrelationIdMiddleware>();
+        app.UseTeamHubCorrelationId();
         app.UseSerilogRequestLoggingExcludingHealth();
         app.UseForwardedHeaders();
         app.UseCors(GatewayPolicies.Cors);
@@ -96,7 +97,7 @@ public static class ApplicationBuilderExtensions
                 upstreamAddress);
         });
 
-        app.MapReverseProxy();
+        app.MapReverseProxy().RequireRateLimiting(GatewayPolicies.RateLimit);
 
         return app;
     }

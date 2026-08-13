@@ -14,21 +14,24 @@
 ## Do
 - Keep routing `/api/auth/{**catch-all}` to `auth-cluster`.
 - Keep routing `/api/organizations/{**catch-all}` to `team-cluster`.
+- Keep routing `/api/notifications/{**catch-all}` to `notification-cluster`.
 - Keep routing `/api/graphql/{**catch-all}` to `bff-cluster`.
 - Keep destinations per environment from config.
-- In dev (manual), keep gateway on `http://localhost:5000`, auth destination on `http://localhost:5001/`, team destination on `http://localhost:5002/`, bff destination on `http://localhost:5003/`.
-- In dev (Aspire), AppHost overrides auth destination to `http://team-hub-auth`, team destination to `http://team-hub-organization`, bff destination to `http://team-hub-bff` (YARP service discovery via `Microsoft.Extensions.ServiceDiscovery.Yarp`).
-- In docker (Production), map gateway to host `5000` (`team-hub-gateway-prod`, HTTP only, debug); bff cluster -> `http://bff:8080/`.
+- In dev (manual), keep gateway on `http://localhost:5000`, auth destination on `http://localhost:5001/`, team destination on `http://localhost:5002/`, notification destination on `http://localhost:5004/`, bff destination on `http://localhost:5003/`.
+- In dev (Aspire), AppHost overrides auth destination to `http://srv-auth`, team destination to `http://srv-organization`, notification destination to `http://srv-notification`, bff destination to `http://srv-bff` (YARP service discovery via `Microsoft.Extensions.ServiceDiscovery.Yarp`).
+- In docker (Production), map gateway to host `5000` (`gw-api-prod`, HTTP only, debug); bff cluster -> `http://srv-bff:8080/`; notification cluster -> `http://srv-notification:8080/` when that service is deployed.
 - TLS terminates at infrastructure nginx; gateway listens on HTTP only.
 - Use `ForwardedHeaders` (`X-Forwarded-For`, `X-Forwarded-Proto`, `X-Forwarded-Host`) before other middleware.
 - Keep global `UseExceptionHandler` returning JSON `{"error":"Internal Server Error"}` without stack trace.
 - Keep CORS on gateway with origins from config (`Cors:AllowedOrigins`).
-- Keep rate limiting per IP (`RateLimiting:*`) at gateway entry.
+- Keep rate limiting per IP (`RateLimiting:*`) at gateway entry (`RequireRateLimiting` on YARP + GlobalLimiter for invite/import/avatar paths).
+- Sensitive path limits (config): invite create/resend, invite accept, import, avatar PUT.
 - Keep JWT auth validation configurable (`AuthValidation:*`, `Jwt:*`); disabled by default.
 - Keep healthcheck at `/health` as minimal API with Swagger summary; log only unhealthy results.
-- Exclude `/health` and `/metrics` from Serilog request logging (`UseSerilogRequestLoggingExcludingHealth`).
-- Observability via `TeamHub.Observability`: Serilog (console + OTLP prod), metrics (`/metrics`), OpenTelemetry traces (OTLP).
-- Keep `CorrelationIdMiddleware` before `UseSerilogRequestLogging` (`X-Correlation-ID` = OpenTelemetry `TraceId`).
+- Docker image runs as non-root (`USER app`); Dockerfile + Compose healthcheck hit `/health` (interval `120s`). `gw-nginx` waits for `gw-api` `service_healthy`.
+- Exclude `/health` and `/metrics` from Serilog request logging (`UseSerilogRequestLoggingExcludingHealth` from `TeamHub.Observability`).
+- Observability via `TeamHub.Observability`: Serilog (console + OTLP prod), metrics (`/metrics`), OpenTelemetry traces (OTLP), shared CorrelationId middleware.
+- Keep `UseTeamHubCorrelationId` before `UseSerilogRequestLogging` (`X-Correlation-ID` = OpenTelemetry `TraceId`).
 - Enrich all request logs with Serilog `CorrelationId` via `LogContext`.
 - Keep detailed proxy request logs: correlation id, method, path, status, duration, route, cluster, upstream destination.
 - Echo `X-Correlation-ID` on every response.

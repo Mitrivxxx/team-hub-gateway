@@ -1,6 +1,6 @@
 using team_hub_gateway.Configuration;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using TeamHub.Observability;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -13,6 +13,12 @@
           "Path": "/api/organizations/{**catch-all}"
         }
       },
+      "notifications-route": {
+        "ClusterId": "notification-cluster",
+        "Match": {
+          "Path": "/api/notifications/{**catch-all}"
+        }
+      },
       "graphql-route": {
         "ClusterId": "bff-cluster",
         "Match": {
@@ -29,6 +35,11 @@
       "team-cluster": {
         "Destinations": {
           "team": {}
+        }
+      },
+      "notification-cluster": {
+        "Destinations": {
+          "notification": {}
         }
       },
       "bff-cluster": {
