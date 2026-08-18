@@ -28,7 +28,7 @@ public static class ApplicationBuilderExtensions
         });
 
         app.UseTeamHubCorrelationId();
-        app.UseSerilogRequestLoggingExcludingHealth();
+        app.UseTeamHubSessionId();
         app.UseForwardedHeaders();
         app.UseCors(GatewayPolicies.Cors);
         app.UseRateLimiter();
@@ -65,6 +65,9 @@ public static class ApplicationBuilderExtensions
             context.Response.ContentType = "application/json";
             await context.Response.WriteAsJsonAsync(new { error = "Unauthorized" });
         });
+
+        app.UseTeamHubUserIdLogging();
+        app.UseSerilogRequestLoggingExcludingHealth();
 
         app.Use(async (context, next) =>
         {

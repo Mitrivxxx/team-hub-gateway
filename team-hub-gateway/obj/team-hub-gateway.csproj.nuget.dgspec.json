@@ -10,7 +10,7 @@
         "projectUniqueName": "/home/matsma/project/team-hub/aspire/TeamHub.ServiceDefaults/TeamHub.ServiceDefaults.csproj",
         "projectName": "TeamHub.ServiceDefaults",
         "projectPath": "/home/matsma/project/team-hub/aspire/TeamHub.ServiceDefaults/TeamHub.ServiceDefaults.csproj",
-        "packagesPath": "/home/matsma/.nuget/packages/",
+        "packagesPath": "/tmp/cursor-sandbox-cache/d37be0c45b07f58c62ca2101e3bfb8fe/nuget",
         "outputPath": "/home/matsma/project/team-hub/aspire/TeamHub.ServiceDefaults/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
@@ -499,7 +499,7 @@
         "projectUniqueName": "/home/matsma/project/team-hub/building-blocks/TeamHub.Observability/TeamHub.Observability.csproj",
         "projectName": "TeamHub.Observability",
         "projectPath": "/home/matsma/project/team-hub/building-blocks/TeamHub.Observability/TeamHub.Observability.csproj",
-        "packagesPath": "/home/matsma/.nuget/packages/",
+        "packagesPath": "/tmp/cursor-sandbox-cache/d37be0c45b07f58c62ca2101e3bfb8fe/nuget",
         "outputPath": "/home/matsma/project/team-hub/building-blocks/TeamHub.Observability/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
@@ -556,6 +556,10 @@
               "target": "Package",
               "version": "[1.17.0-beta.1, )"
             },
+            "OpenTelemetry.Instrumentation.GrpcNetClient": {
+              "target": "Package",
+              "version": "[1.17.0-beta.1, )"
+            },
             "OpenTelemetry.Instrumentation.Http": {
               "target": "Package",
               "version": "[1.17.0, )"
@@ -567,6 +571,10 @@
             "OpenTelemetry.Instrumentation.Runtime": {
               "target": "Package",
               "version": "[1.17.0, )"
+            },
+            "OpenTelemetry.Instrumentation.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[1.17.0-beta.1, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -1032,7 +1040,7 @@
         "projectUniqueName": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
         "projectName": "team-hub-gateway",
         "projectPath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/team-hub-gateway.csproj",
-        "packagesPath": "/home/matsma/.nuget/packages/",
+        "packagesPath": "/tmp/cursor-sandbox-cache/d37be0c45b07f58c62ca2101e3bfb8fe/nuget",
         "outputPath": "/home/matsma/project/team-hub/services/team-hub-gateway/team-hub-gateway/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [

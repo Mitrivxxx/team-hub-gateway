@@ -6,10 +6,10 @@ public sealed class AuthValidationOptions
 
     public string[] ExcludedPathPrefixes { get; init; } =
     [
-        "/api/auth/v0.0/login",
-        "/api/auth/v0.0/register",
-        "/api/auth/v0.0/refresh",
-        "/api/auth/v0.0/logout",
-        "/api/auth/v0.0/change-password"
+        "/api/auth/v1/login",
+        "/api/auth/v1/register",
+        "/api/auth/v1/refresh",
+        "/api/auth/v1/logout",
+        "/api/auth/v1/change-password"
     ];
 }

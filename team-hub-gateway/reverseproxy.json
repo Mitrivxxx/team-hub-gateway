@@ -19,6 +19,12 @@
           "Path": "/api/notifications/{**catch-all}"
         }
       },
+      "chat-route": {
+        "ClusterId": "chat-cluster",
+        "Match": {
+          "Path": "/api/chat/{**catch-all}"
+        }
+      },
       "graphql-route": {
         "ClusterId": "bff-cluster",
         "Match": {
@@ -40,6 +46,11 @@
       "notification-cluster": {
         "Destinations": {
           "notification": {}
+        }
+      },
+      "chat-cluster": {
+        "Destinations": {
+          "chat": {}
         }
       },
       "bff-cluster": {

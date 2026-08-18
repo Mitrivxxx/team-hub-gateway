@@ -1,0 +1,41 @@
+# team-hub-gateway
+
+## Purpose
+- API gateway for Team Hub based on YARP reverse proxy.
+
+## Scope
+- Single entry point for backend APIs behind infrastructure nginx.
+- Route mapping for auth, organization, notification, chat, and GraphQL BFF.
+- Shared CORS, basic rate limiting, health endpoint, and optional JWT validation.
+
+## Runtime and ports
+- Local dev: `http://localhost:5000`.
+- Docker/runtime: container `8080` (host mapping typically `5000 -> 8080`).
+- Health endpoint: `GET /health`.
+- Metrics endpoint: `GET /metrics`.
+
+## Route map
+- `/api/auth/{**catch-all}` -> `auth-cluster`
+- `/api/organizations/{**catch-all}` -> `team-cluster`
+- `/api/notifications/{**catch-all}` -> `notification-cluster`
+- `/api/chat/{**catch-all}` -> `chat-cluster`
+- `/api/graphql/{**catch-all}` -> `bff-cluster`
+
+## Configuration
+- Proxy routes/clusters: `team-hub-gateway/reverseproxy.json`.
+- Runtime settings: `team-hub-gateway/appsettings*.json`.
+- Optional local env and JWT validation settings: `.env` / `.env.example`.
+
+## Integration contracts
+- Edge TLS termination is handled by infrastructure nginx (`gw-nginx`).
+- Service flow: `frontend -> gw-nginx -> gw-api -> target service`.
+- Production routing uses compose service names (`srv-auth`, `srv-organization`, `srv-notification`, `srv-chat`, `srv-bff`).
+
+## Observability
+- Serilog logging.
+- OpenTelemetry traces/logs and Prometheus metrics.
+- Correlation/session/user logging middleware enabled in request pipeline.
+
+## Related docs
+- `AGENT.md`
+- `docs/gateway.mb`
